@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Medical Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Upload Medical Document</h2>
+
+    <p>Select an image of your prescription or medical note</p>
+
+    <input type="file" id="fileInput" accept="image/*">
+    <button onclick="extractText()">Extract Text</button>
+
+    <h3>Extracted Text (Simulated OCR)</h3>
+    <textarea id="extractedText" rows="8" placeholder="Extracted text will appear here..."></textarea>
+
+    <button onclick="saveVisit()">Save Visit</button>
+    <button onclick="window.location.href='history.html'">View Patient History</button>
+
+</div>
+
+<script src="upload.js"></script>
+</body>
+</html>

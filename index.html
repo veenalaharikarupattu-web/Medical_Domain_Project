@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Record System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Patient Registration</h2>
+
+    <form onsubmit="savePatient(event)">
+
+        <label>Patient ID</label>
+        <input type="text" id="patientId" readonly>
+
+        <label>Registration Date</label>
+        <input type="text" id="regDate" readonly>
+
+        <label>Patient Name</label>
+        <input type="text" id="name" required>
+
+        <label>Age</label>
+        <input type="number" id="age" required>
+
+        <label>Gender</label>
+        <select id="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <label>Phone Number</label>
+        <input type="text" id="phone" required>
+
+        <!-- Consent below phone -->
+        <div class="consent-box">
+            <label class="consent">
+                <input type="checkbox" id="consentCheckbox">
+                <span>
+                    I give my consent to store and use my medical data digitally
+                    for healthcare record management purposes.
+                </span>
+            </label>
+        </div>
+
+        <button type="submit">Continue</button>
+        <button onclick="window.location.href='history.html'">
+    View All Records
+</button>
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
